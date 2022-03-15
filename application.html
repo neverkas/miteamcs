@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+<script type="text/x-handlebars">
+<h1 style="color:#fff">
+{{outlet}}
+</h1>
+<div id="page">
+{{view App.NavbarView}}
+{{view App.SliderView}}
+{{view App.VideosView}}
+<div id="main">
+	{{view App.ContentView}}
+	{{view App.SidebarView}}
+</div>
+</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="noticias">
+Las noticias estan aca
+</script>
+<script type="text/x-handlebars" data-template-name="navbar">
+<header id="nav">
+	<div id="nav-register">
+	</div>
+	<div id="nav-block">
+		<ul class="nav-links">
+			<li class="nav-item">
+				<a id="home" class="menu-link text-size-medium text-color-white" href="#">inicio</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#noticias">noticias</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#">miembros</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#">servidores</a>
+			</li>
+		</ul>
+		<div id="logo">
+			<img src="http://www.sysgames.net/miteamcs/images/logo.png">
+		</div>
+		<ul class="nav-links">
+			<li class="nav-item">
+				<a id="videos" class="menu-link text-size-medium text-color-gray">videos</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#">pcw/closed</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#">foros</a>
+			</li>
+			<li class="nav-item">
+				<a class="menu-link text-size-medium text-color-gray" href="#">contacto</a>
+			</li>
+		</ul>
+	</div>
+</header>
+</script>
+<script type="text/x-handlebars" data-template-name="slider">
+<div id="slider">
+	<div class="block-background">
+		<div class="block-text">
+			<div class="game">
+				<span class="text-color-orange text-style-strong text-size-medium">Counter Strike 1.6</span>
+			</div>
+			<div class="title">
+				<span class="text-color-white text-style-strong text-size-big">Comunidad SysGames</span>
+			</div>
+			<div class="description">
+				<span class="text-color-gray text-size-small">
+					Las noticias más importantes sobre los juegos online y juegos en red que no te podes perder.
+					Visita nuestra radio online, y escuchá los mejores temas.
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
+<script type="text/x-handlebars" data-template-name="videos">
+<div id="block-videos">
+	<div id="videos-head">
+		<h3 class="widget-title text-color-white text-size-big">VIDEOS</h3>
+	</div>
+	
+	<div id="videos-content">
+		<div id="videos-list">
+			<div class='align-left video-row showModal-medium showModal' style='width:210px;'>
+				<div class='thumbnail text-align-center'>
+					<img width='185' src='http://i2.ytimg.com/vi/x6cXXMeVhls/mqdefault.jpg' alt='$title' title='$title' />	
+				</div>
+				<div class='title text-align-center'>
+					<span class='video-title text-size-medium text-color-white'>$title_short</span>
+				</div>
+				<input type='hidden' class='video_title' value='$title' />
+				<input type='hidden' class='video_src' value='$video' /> 
+			</div>
+			<div class='align-left video-row showModal-medium showModal' style='width:210px;'>
+				<div class='thumbnail text-align-center'>
+					<img width='185' src='http://i2.ytimg.com/vi/x6cXXMeVhls/mqdefault.jpg' alt='$title' title='$title' />	
+				</div>
+				<div class='title text-align-center'>
+					<span class='video-title text-size-medium text-color-white'>$title_short</span>
+				</div>
+				<input type='hidden' class='video_title' value='$title' />
+				<input type='hidden' class='video_src' value='$video' /> 
+			</div>
+			<div class='align-left video-row showModal-medium showModal' style='width:210px;'>
+				<div class='thumbnail text-align-center'>
+					<img width='185' src='http://i2.ytimg.com/vi/x6cXXMeVhls/mqdefault.jpg' alt='$title' title='$title' />	
+				</div>
+				<div class='title text-align-center'>
+					<span class='video-title text-size-medium text-color-white'>$title_short</span>
+				</div>
+				<input type='hidden' class='video_title' value='$title' />
+				<input type='hidden' class='video_src' value='$video' /> 
+			</div>
+			<div class='align-left video-row showModal-medium showModal' style='width:210px;'>
+				<div class='thumbnail text-align-center'>
+					<img width='185' src='http://i2.ytimg.com/vi/x6cXXMeVhls/mqdefault.jpg' alt='$title' title='$title' />	
+				</div>
+				<div class='title text-align-center'>
+					<span class='video-title text-size-medium text-color-white'>$title_short</span>
+				</div>
+				<input type='hidden' class='video_title' value='$title' />
+				<input type='hidden' class='video_src' value='$video' /> 
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</script>
+<script type="text/x-handlebars" data-template-name="content">
+<div id="content" class="align-left">
+	<div id="section-home" class='block-section'>
+		<div class='article'>
+			<div class='thumbnail align-left'>
+				<span class='date text-size-medium'>{$date}</span>							
+				<img src='http://graph.facebook.com/201998256604286/picture?width=300&height=179' width='300' border='0' />
+			</div>
+			<div class='content align-right'>
+				<div class='author'>
+					<span class='text-color-white text-size-small'>By Admin</span>
+				</div>
+				<div class='title'>
+					<span class='text-color-orange-dark text-size-small'>{$title}</span>
+				</div>
+				<div class='description'>
+					<span class='text-color-gray text-size-small'>{$content}</span>
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div class='article'>
+			<div class='thumbnail align-left'>
+				<span class='date text-size-medium'>{$date}</span>							
+				<img src='http://graph.facebook.com/201998256604286/picture?width=300&height=179' width='300' border='0' />
+			</div>
+			<div class='content align-right'>
+				<div class='author'>
+					<span class='text-color-white text-size-small'>By Admin</span>
+				</div>
+				<div class='title'>
+					<span class='text-color-orange-dark text-size-small'>{$title}</span>
+				</div>
+				<div class='description'>
+					<span class='text-color-gray text-size-small'>{$content}</span>
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+		<div class='article'>
+			<div class='thumbnail align-left'>
+				<span class='date text-size-medium'>{$date}</span>							
+				<img src='http://graph.facebook.com/201998256604286/picture?width=300&height=179' width='300' border='0' />
+			</div>
+			<div class='content align-right'>
+				<div class='author'>
+					<span class='text-color-white text-size-small'>By Admin</span>
+				</div>
+				<div class='title'>
+					<span class='text-color-orange-dark text-size-small'>{$title}</span>
+				</div>
+				<div class='description'>
+					<span class='text-color-gray text-size-small'>{$content}</span>
+				</div>
+			</div>
+			<div class='clear'></div>
+		</div>
+	</div>				
+	<div id="section-videos" class='block-section'>
+	</div>				
+</div>
+</script>
+<script type="text/x-handlebars" data-template-name="sidebar">
+<div id="sidebar" class="align-left">
+	<div class="widget" id="widget-about">
+		<div class="block-content">
+			<header>
+				<h3 class="widget-title text-color-orange-dark text-size-big">Nosotros</h3>
+			</header>
+			<section>
+			<span class="text-color-orange-dark text-size-medium">Nuestra historia en el Counter-Strike 1.6</span><br />
+			<span class="text-color-gray text-size-medium">Como organización fuimos de los mejores teams de CS de la historia y todos ellos han contribuido en esto.
+				En el futuro próximo nos vamos a dedicar al CS:GO y vamos a tener jugadores si es que se hace un eSport ocmo lo fue en el 1.6.
+				Es solo cuestión de esperar y ver que nos depara el futuro.</span>
+			</section>
+		</div>
+	</div><!-- About #End -->
+	<div class="widget" id="widget-servers">
+		<div class="block-content">
+			<header>
+				<h3 class="widget-title text-color-orange-dark text-size-big">Servidores</h3>
+			</header>
+			<section>
+			<span class="text-color-white text-size-medium">
+				cs.sysgames.net:27015 [PUBLICO]<br />
+				cs.sysgames.net:27016 [DEATHRUN] <br />
+				cs.sysgames.net:27017 [SURF]<br />
+				cs.sysgames.net:27018 [KZ]<br />
+				cs.sysgames.net:27019 [ZOMBIEPLAGUE]<br />
+				cs.sysgames.net:27020 [JAILBREAK]<br />
+			</span>
+			</section>
+		</div>
+	</div><!-- About #End -->
+	<div class="widget" style="background:none; border-bottom:none;" id="widget-results">
+			<header>
+				<div>
+					<img src="images/results-title.png" />
+				</div>
+			</header>					
+			<section>
+
+				<ul id="results-fields">
+					<li class="results-item">
+						<span class='results-date text-size-small text-color-white'>18 Nov, 2013</span>
+						<span class='text-size-small text-color-white'>Team Ske vs Los5.Mejores</span>
+					</li>
+					<li class="results-item">
+						<span class='results-date text-size-small text-color-white'>19 Nov, 2013</span>
+						<span class='text-size-small text-color-white'>Team Ske vs fnatic</span>
+					</li>
+					<li class="results-item">
+						<span class='results-date text-size-small text-color-white'>20 Nov, 2013</span>
+						<span class='text-size-small text-color-white'>Team Ske vs xTremer7</span>
+					</li>
+					<li class="results-item">
+						<span class='results-date text-size-small text-color-white'>25 Nov, 2013</span>
+						<span class='text-size-small text-color-white'>Team Ske vs Sk1n</span>
+					</li>
+					<li class="results-item">
+						<span class='results-date text-size-small text-color-white'>29 Nov, 2013</span>
+						<span class='text-size-small text-color-white'>Team Ske vs f0rev3r</span>
+					</li>
+				</ul>
+
+			</section>
+	</div><!-- About #End -->
+</div><!-- Sidebar #End -->
+</script>
+<script type="text/javascript" src="js/libs/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/libs/handlebars-1.0.0.js"></script>
+<script type="text/javascript" src="js/libs/ember-1.0.0.js"></script>
+<script type="text/javascript">
+App = Ember.Application.create();
+
+App.Router.map(function(){
+	this.route("inicio", {path:'/'});
+	this.route("noticias", {path:'/noticias'});
+});
+
+App.NavbarView = Ember.View.extend({
+	templateName:'navbar'
+});
+App.SliderView = Ember.View.extend({
+	templateName:'slider'
+});
+App.VideosView = Ember.View.extend({
+	templateName:'videos'
+});
+App.ContentView = Ember.View.extend({
+	templateName:'content'
+});
+App.SidebarView = Ember.View.extend({
+	templateName:'sidebar'
+});
+</script>
+</body>
+</html>

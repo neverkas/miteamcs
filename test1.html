@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://cdn.firebase.com/v0/firebase.js"></script>
+<script src="http://builds.emberjs.com/handlebars-1.0.0.js"></script>
+<script src="http://builds.emberjs.com/tags/v1.1.0/ember.js"></script>
+<script src="http://firebase.github.io/emberFire/emberfire-latest.js"></script>
+<script>
+/*
+App = Ember.Application.create();
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return EmberFire.Array.create({
+      ref: new Firebase("https://openyourcode.firebaseio.com/list")
+    });
+  }
+});
+ App.IndexController = Ember.ArrayController.extend({
+    actions: {
+      addItem: function() {
+        this.pushObject(this.get("item"));
+      }
+    }
+  });
+*/
+var chatRef = new Firebase('https://openyourcode.firebaseio.com/');
+var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+  if (error) {
+    // an error occurred while attempting login
+    console.log(error);
+  } else if (user) {
+    // user authenticated with Firebase
+    console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+  } else {
+    // user is logged out
+  }
+});
+auth.login('facebook', {
+  rememberMe: true,
+  scope: 'email,user_likes'
+});
+</script>
+</body>
+</html>

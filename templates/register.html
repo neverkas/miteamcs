@@ -1,0 +1,40 @@
+<div id="myModal-register" style="color:#000;">
+	<form action="" method="post">
+	<h3 style="display:none;">Crea tu Web en 3 pasos</h3>
+	<div class='step-block' id="register-step1">
+		<h4 class='text-style-black'>Paso 1</h4>
+		<div>
+			<span class='text-type-small text-style-black'>-Debes aceptar nuestra aplicación en Facebook</span>
+		</div>
+		<div>
+			<img id="app-miteamcs" src="http://www.sysgames.net/miteamcs/images/facebook.png" alt="Aplicación de Facebook" title="Aplicación de Facebook">
+		</div>
+	</div><!-- BLOCK STEP 1 -->
+
+	<div class='step-block' id="register-step2" style="display:none;">
+		<h4 class='text-style-black'>Paso 2</h4>
+		<div>
+			<span class='text-type-small text-style-black'>-Escribí el nombre de tu página de Facebook</span>
+		</div>
+		<div>
+			<div id="register-fanpage">
+			http://www.facebook.com/ <input class="field-style-gray field-width-big field-height-medium" type="text" name="facebook[page_name]" value="teamske" />
+			</div>
+		</div>
+		<div>
+			<a class='button-style-step next-step text-style-black' id="go-step3">Siguiente</a>
+		</div>
+	</div><!-- BLOCK STEP 2 -->
+
+	<div class='step-block' id="register-step3" style="display:none;">
+		<h4 class='text-style-black'>Paso 3</h4>
+		<span class='text-type-small text-style-black'>-Te enviaremos un correo para que confirmes que la cuenta de Facebook te pertenece a vos</span>
+		<br />
+		<input type="submit" value="Enviar Confirmacion" />
+	</div><!-- BLOCK STEP 3 -->
+	<div>
+		<input type="hidden" name="action" value="myapplication" />
+		<input type="hidden" name="facebook[user_id]" id="facebook_userid" />
+	</div>
+	</form>
+</div>
